@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cbp.centurybookpavilion.mapper.ArticleMapper">
+    <select id="selectArticle" resultType="com.cbp.centurybookpavilion.vo.ArticleVo">
+        select ar.article_id,ar.article_title,ar.article_content, stu.student_name
+        from tb_article as ar,tb_student as stu
+        where ar.student_id = stu.student_id
+    </select>
+</mapper>
